@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Школа №51 - Главная</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="../dist/css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="bg-gray-800 shadow-lg">
+        <nav class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-white text-2xl font-bold">Школа №51</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-4">
+                    <a href="index.html" class="nav-link">Главная</a>
+                    <a href="about.html" class="nav-link">О школе</a>
+                    <a href="news.html" class="nav-link">Новости</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden mt-4">
+                <a href="index.html" class="nav-link block">Главная</a>
+                <a href="about.html" class="nav-link block">О школе</a>
+                <a href="news.html" class="nav-link block">Новости</a>
+                <a href="contacts.html" class="nav-link block">Контакты</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Добро пожаловать в Школу №51</h1>
+            <p class="text-xl mb-8">Качественное образование для успешного будущего</p>
+            <a href="about.html" class="btn-primary">Узнать больше</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="section-title text-center">Наши преимущества</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-primary mb-4">Качественное образование</h3>
+                    <p class="text-gray-600">Высококвалифицированные преподаватели и современные методики обучения</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-primary mb-4">Развитие талантов</h3>
+                    <p class="text-gray-600">Множество кружков и секций для всестороннего развития</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h3 class="text-xl font-bold text-primary mb-4">Современное оснащение</h3>
+                    <p class="text-gray-600">Новейшее оборудование и комфортные условия для обучения</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Школа №51</h3>
+                    <p class="text-gray-400">Качественное образование для успешного будущего</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Контакты</h3>
+                    <p class="text-gray-400">Телефон: +7 (XXX) XXX-XX-XX</p>
+                    <p class="text-gray-400">Email: school51@example.com</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Адрес</h3>
+                    <p class="text-gray-400">ул. Примерная, д. 51</p>
+                    <p class="text-gray-400">г. Город, 123456</p>
+                </div>
+            </div>
+            <div class="mt-8 text-center text-gray-400">
+                <p>&copy; 2025 Школа №51. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../dist/js/main.js"></script>
+</body>
+</html> 
