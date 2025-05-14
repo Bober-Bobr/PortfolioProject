@@ -4,12 +4,11 @@
     "module": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "strict": true,
-    "noImplicitAny": true,
-    "strictNullChecks": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
+    "skipLibCheck": true,
+    "outDir": "./scripts"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*.ts"],
   "exclude": ["node_modules"]
 }

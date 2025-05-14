@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>История заказов - Купи-Плати</title>
+  <link href="./styles/output.css" rel="stylesheet">
+  <script src="./scripts/main.js" defer></script>
+  <script src="./scripts/orders.js" defer></script>
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-blue-600 text-white shadow-md">
+    <div class="container mx-auto px-4 py-4">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center space-x-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" />
+          </svg>
+          <h1 class="text-2xl font-bold">Купи-Плати</h1>
+        </div>
+        <nav>
+          <ul class="flex space-x-6">
+            <li><a href="index.html" class="hover:underline">Главная</a></li>
+            <li><a href="products.html" class="hover:underline">Товары</a></li>
+            <li><a href="about.html" class="hover:underline">О нас</a></li>
+            <li><a href="contact.html" class="hover:underline">Контакты</a></li>
+          </ul>
+        </nav>
+        <div class="flex items-center space-x-4">
+          <div class="relative cart-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center cart-count">0</span>
+          </div>
+          <a href="login.html" class="hover:underline">Войти</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Account Navigation -->
+  <div class="bg-white shadow">
+    <div class="container mx-auto px-4">
+      <div class="flex overflow-x-auto py-4 space-x-8">
+        <a href="account.html" class="text-gray-600 hover:text-blue-600 whitespace-nowrap">Личный кабинет</a>
+        <a href="orders.html" class="text-blue-600 font-semibold border-b-2 border-blue-600 pb-4 -mb-4 whitespace-nowrap">История заказов</a>
+        <a href="wishlist.html" class="text-gray-600 hover:text-blue-600 whitespace-nowrap">Избранное</a>
+        <a href="addresses.html" class="text-gray-600 hover:text-blue-600 whitespace-nowrap">Адреса доставки</a>
+        <a href="profile.html" class="text-gray-600 hover:text-blue-600 whitespace-nowrap">Настройки профиля</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Orders Section -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <h1 class="text-3xl font-bold mb-8">История заказов</h1>
+      
+      <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+        <div class="p-6 border-b">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+            <div>
+              <h2 class="text-xl font-semibold">Заказ #123456</h2>
+              <p class="text-gray-600">Оформлен: 15 мая 2023</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+              <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Доставлен</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 border-b">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-2">
+              <h3 class="font-semibold mb-2">Товары</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <img src="/placeholder.svg?height=80&width=80" alt="Смартфон XYZ Pro" class="w-16 h-16 object-cover rounded mr-4">
+                  <div>
+                    <h4 class="font-medium">Смартфон XYZ Pro</h4>
+                    <p class="text-gray-600">Количество: 1</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <img src="/placeholder.svg?height=80&width=80" alt="Беспроводные наушники" class="w-16 h-16 object-cover rounded mr-4">
+                  <div>
+                    <h4 class="font-medium">Беспроводные наушники</h4>
+                    <p class="text-gray-600">Количество: 1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">Доставка</h3>
+              <p class="text-gray-600">Стандартная доставка</p>
+              <p class="text-gray-600">Москва, ул. Ленина, 123, кв. 45</p>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">Оплата</h3>
+              <p class="text-gray-600">Банковская карта</p>
+              <p class="text-gray-600 font-semibold mt-4">Итого: 62 998 ₽</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-wrap gap-3">
+          <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition duration-300">Повторить заказ</a>
+          <a href="#" class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-50 transition duration-300">Отследить заказ</a>
+          <a href="#" class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-50 transition duration-300">Оставить отзыв</a>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow overflow-hidden mb-8">
+        <div class="p-6 border-b">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+            <div>
+              <h2 class="text-xl font-semibold">Заказ #123455</h2>
+              <p class="text-gray-600">Оформлен: 2 мая 2023</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+              <span class="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">В пути</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 border-b">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-2">
+              <h3 class="font-semibold mb-2">Товары</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <img src="/placeholder.svg?height=80&width=80" alt="Кофемашина" class="w-16 h-16 object-cover rounded mr-4">
+                  <div>
+                    <h4 class="font-medium">Кофемашина</h4>
+                    <p class="text-gray-600">Количество: 1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">Доставка</h3>
+              <p class="text-gray-600">Экспресс доставка</p>
+              <p class="text-gray-600">Москва, ул. Ленина, 123, кв. 45</p>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">Оплата</h3>
+              <p class="text-gray-600">Банковская карта</p>
+              <p class="text-gray-600 font-semibold mt-4">Итого: 25 599 ₽</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-wrap gap-3">
+          <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition duration-300">Повторить заказ</a>
+          <a href="#" class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-50 transition duration-300">Отследить заказ</a>
+        </div>
+      </div>
+      
+      <div class="bg-white rounded-lg shadow overflow-hidden">
+        <div class="p-6 border-b">
+          <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+            <div>
+              <h2 class="text-xl font-semibold">Заказ #123454</h2>
+              <p class="text-gray-600">Оформлен: 15 апреля 2023</p>
+            </div>
+            <div class="mt-4 md:mt-0">
+              <span class="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">Доставлен</span>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 border-b">
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="md:col-span-2">
+              <h3 class="font-semibold mb-2">Товары</h3>
+              <div class="space-y-4">
+                <div class="flex items-center">
+                  <img src="/placeholder.svg?height=80&width=80" alt="Мужская куртка" class="w-16 h-16 object-cover rounded mr-4">
+                  <div>
+                    <h4 class="font-medium">Мужская куртка</h4>
+                    <p class="text-gray-600">Количество: 1</p>
+                  </div>
+                </div>
+                <div class="flex items-center">
+                  <img src="/placeholder.svg?height=80&width=80" alt="Мужские джинсы" class="w-16 h-16 object-cover rounded mr-4">
+                  <div>
+                    <h4 class="font-medium">Мужские джинсы</h4>
+                    <p class="text-gray-600">Количество: 1</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">Доставка</h3>
+              <p class="text-gray-600">Стандартная доставка</p>
+              <p class="text-gray-600">Москва, ул. Ленина, 123, кв. 45</p>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2">Оплата</h3>
+              <p class="text-gray-600">Наличными при получении</p>
+              <p class="text-gray-600 font-semibold mt-4">Итого: 13 998 ₽</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-6 flex flex-wrap gap-3">
+          <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-md font-semibold hover:bg-blue-700 transition duration-300">Повторить заказ</a>
+          <a href="#" class="bg-white border border-gray-300 text-gray-700 px-4 py-2 rounded-md font-semibold hover:bg-gray-50 transition duration-300">Оставить отзыв</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 mt-auto">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-xl font-bold mb-4">Купи-Плати</h3>
+          <p class="text-gray-400">Ваш надежный онлайн-магазин с 2023 года</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Информация</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-gray-400 hover:text-white">О нас</a></li>
+            <li><a href="delivery.html" class="text-gray-400 hover:text-white">Доставка</a></li>
+            <li><a href="returns.html" class="text-gray-400 hover:text-white">Возврат</a></li>
+            <li><a href="terms.html" class="text-gray-400 hover:text-white">Условия использования</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Аккаунт</h4>
+          <ul class="space-y-2">
+            <li><a href="login.html" class="text-gray-400 hover:text-white">Войти</a></li>
+            <li><a href="register.html" class="text-gray-400 hover:text-white">Регистрация</a></li>
+            <li><a href="orders.html" class="text-gray-400 hover:text-white">История заказов</a></li>
+            <li><a href="wishlist.html" class="text-gray-400 hover:text-white">Избранное</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-4">Контакты</h4>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+              <span class="text-gray-400">Москва, ул. Примерная, 123</span>
+            </li>
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+              </svg>
+              <span class="text-gray-400">+7 (123) 456-78-90</span>
+            </li>
+            <li class="flex items-center">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+              <span class="text-gray-400">info@kupi-plati.ru</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+        <p>&copy; 2023 Купи-Плати. Все права защищены.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cart Sidebar -->
+  <div class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden" id="cart-overlay">
+    <div class="absolute right-0 top-0 h-full w-full max-w-md bg-white shadow-xl transform transition-transform duration-300 translate-x-full" id="cart-sidebar">
+      <div class="flex flex-col h-full">
+        <div class="flex justify-between items-center p-4 border-b">
+          <h2 class="text-xl font-bold">Корзина</h2>
+          <button id="close-cart" class="text-gray-500 hover:text-gray-700">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex-grow overflow-auto p-4" id="cart-items">
+          <!-- Cart items will be loaded here -->
+          <div class="text-center text-gray-500 py-8" id="empty-cart-message">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto text-gray-400 mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+            </svg>
+            <p>Ваша корзина пуста</p>
+          </div>
+        </div>
+        <div class="p-4 border-t">
+          <div class="flex justify-between mb-4">
+            <span class="font-semibold">Итого:</span>
+            <span class="font-bold" id="cart-total">0 ₽</span>
+          </div>
+          <a href="checkout.html" class="block w-full bg-blue-600 text-white text-center px-4 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">Оформить заказ</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
