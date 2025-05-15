@@ -1,11 +1,12 @@
 # Проекты портфолио команды Codeforge 
 
-Проекты нашей команды, разработанные с использованием TypeScript и Tailwind CSS.
+Проекты нашей команды, разработанные с использованием TypeScript, Tailwind CSS и Python.
 
 ## Технологии
 
 - TypeScript
 - Tailwind CSS
+- Python
 - HTML5
 - CSS3
 
